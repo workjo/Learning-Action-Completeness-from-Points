@@ -10,7 +10,7 @@
 **The issue is that recommended each CUDA and PyTorch version of the official LACP code is 10.2 and 1.6, but RTX 3090 is only compatible with CUDA version 11 or higher.<br>
 So I attempted to change PyTorch and Torchvision version that supports CUDA version 11 or higher.<br>**
 RTX 3090 을 사용하는 경우 최대 CUDA 11.0 까지 지원하는Pytorch v1.7.0 이상을 이용해야 함<br>
-저자가 배포한 소스코드 구동을 위한 requirements.txt 를 확인한 결과 Pytorch v1.6.0 을 이용하였음<br><br>
+저자가 배포한 소스코드 구동을 위한 requirements.txt 를 확인한 결과 Pytorch v1.6.0 을 이용하였음<br>
 
 **Required the environment's dependencies are as below.<br>**
 저자가 배포한 소스코드를 Nvidia GeForce RTX 3090 기반 시스템에서 구동시키기 위해 PyTorch와 Torchvision의 버전을 다음과 같이 변경하였음<br><br>
