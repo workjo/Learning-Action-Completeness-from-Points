@@ -35,7 +35,8 @@ Pytorch 버전 변화에 따른 영향을 스터디하기 위해 저자가 배�
 |Paper|62.7|44.5|
 |TITAN RTX|62.5|43.8|
 |RTX 3090|62.4|43.9|
-**You can download my reproduction medels -> (Link)[https://drive.google.com/drive/folders/1Y0BaRwbALN6-VlHfqfCoPdmeSeEOveIc?usp=sharing]**
+
+**You can download my reproduction medels -> [Link](https://drive.google.com/drive/folders/1Y0BaRwbALN6-VlHfqfCoPdmeSeEOveIc?usp=sharing)**
 ## **Conclusion**
 1. **I could check to reproduce similar results compared to the performance reported in ICCV 2021 paper.**<br>
 ICCV  2021 논문에서 reporting된 성능이 비교적 잘 재현되는 것을 확인<br>
