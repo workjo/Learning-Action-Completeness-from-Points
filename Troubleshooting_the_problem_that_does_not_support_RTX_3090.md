@@ -3,18 +3,20 @@
 
 # Troubleshooting the problem that does not support Nvidia GeForce RTX 3090
 
-I tried to run the official [LACP](https://github.com/Pilhyeon/Learning-Action-Completeness-from-Points) code on a RTX 3090 but faced a CUDA compatibility issue.<br>
+I tried to run the official [LACP](https://github.com/Pilhyeon/Learning-Action-Completeness-from-Points) code on an RTX 3090 but faced a CUDA compatibility issue.<br>
 
 ![에러이미지](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbubhWo%2FbtrTltOPyFf%2FuDqUqarRJ1iCEotmOwlvOk%2Fimg.png)
 (Error message: NVIDIA GeForce RTX 3090 with CUDA capability sm_86 is not compatible with the current PyTorch installation.)<br><br>
-The issue is that recommended CUDA and PyTorch version are 10.2 and 1.6, respectively. But RTX 3090 is only compatible with CUDA version 11 or higher.<br>
+The issue is that RTX 3090 is only compatible with CUDA version 11 or higher.<br>
+Because recommended PyTorch version and Torchvision version are 1.6.0 and 0.7.0, respectively, which are supported until CUDA 10.2.<br>
 So I attempted to change PyTorch and Torchvision version that supports CUDA version 11 or higher.<br>
 
 Required virtual environment's dependencies are as below.<br>
-~~torch==1.6.0~~<br>
+- ~~torch==1.6.0~~<br>
 -> **torch==1.7.1+cu110**<br>
-~~torchvision==0.7.0~~<br>
+- ~~torchvision==0.7.0~~<br>
 -> **torchvision==0.8.2+cu110**<br><br>
+
 You can install PyTorch and Torchvision compatible with CUDA 11 by writing the following command.<br>
 ```
 pip install torch==1.7.1+cu110 torchvision==0.8.2+cu110 torchaudio==0.7.2 -f https://download.pytorch.org/whl/torch_stable.html
@@ -30,7 +32,7 @@ And I compared performances reported on paper and two experimental results.<br>
 |TITAN RTX|62.5|43.8|
 |RTX 3090|62.4|43.9|
 
-[Download](https://drive.google.com/drive/folders/1Y0BaRwbALN6-VlHfqfCoPdmeSeEOveIc?usp=sharing) my pre-trained models.
+You can download my pre-trained models in this [link](https://drive.google.com/drive/folders/1Y0BaRwbALN6-VlHfqfCoPdmeSeEOveIc?usp=sharing).
 ## **Conclusion**
 1. Changing the PyTorch version doesn't significantly influence reproduction results on THUMOS'14 dataset.<br><br>
 2. Experimental results were reproduced similarly to the performance reported in ICCV 2021 paper.<br>
