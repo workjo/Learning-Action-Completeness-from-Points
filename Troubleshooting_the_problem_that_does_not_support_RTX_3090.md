@@ -9,7 +9,7 @@ I tried to run the official [LACP](https://github.com/Pilhyeon/Learning-Action-C
 (Error message: NVIDIA GeForce RTX 3090 with CUDA capability sm_86 is not compatible with the current PyTorch installation.)<br><br>
 The issue is that RTX 3090 is only compatible with CUDA version 11 or higher.<br>
 Because recommended PyTorch version and Torchvision version are 1.6.0 and 0.7.0, respectively, which are supported until CUDA 10.2.<br>
-So I attempted to change PyTorch and Torchvision version that supports CUDA version 11 or higher.<br>
+So I attempted to change PyTorch version and Torchvision version that support CUDA version 11 or higher.<br>
 
 Required virtual environment's dependencies are as below.<br>
 - ~~torch==1.6.0~~<br>
